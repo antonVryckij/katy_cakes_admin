@@ -1,8 +1,13 @@
-import './App.css';
-import NavbarNested from './components/NavbarNested/NavbarNested';
+import CssBaseline from '@mui/material/CssBaseline';
+import Dashboard from './components/dashboard';
 
 function App() {
-  return <NavbarNested />;
+  return (
+    <>
+      <CssBaseline />
+      <Dashboard />
+    </>
+  );
 }
 
 export default App;
