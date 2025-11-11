@@ -1,5 +1,36 @@
 import { DataGrid } from '@mui/x-data-grid';
-import { columns, rows } from '../internals/data/gridData';
+import type { GridRowsProp, GridColDef } from '@mui/x-data-grid';
+
+const columns: GridColDef[] = [
+  { field: 'orderNum', headerName: 'Номер замовлення', minWidth: 200 },
+  {
+    field: 'status',
+    headerName: 'Статус',
+    flex: 1,
+    minWidth: 80,
+  },
+  {
+    field: 'client',
+    headerName: 'Клієнт',
+    flex: 1,
+    minWidth: 80,
+  },
+];
+
+const rows: GridRowsProp = [
+  {
+    id: 1,
+    orderNum: 1,
+    status: 'В обробці',
+    client: 'Паровоз Юля',
+  },
+  {
+    id: 2,
+    orderNum: 2,
+    status: 'Гончар Ганна',
+    client: 8345,
+  },
+];
 
 export default function CustomizedDataGrid() {
   return (

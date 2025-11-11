@@ -8,7 +8,6 @@ import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import MenuButton from './MenuButton';
 import MenuContent from './MenuContent';
-import CardAlert from './CardAlert';
 
 interface SideMenuMobileProps {
   open: boolean | undefined;
@@ -35,8 +34,8 @@ export default function SideMenuMobile({ open, toggleDrawer }: SideMenuMobilePro
           height: '100%',
         }}
       >
-        <Stack direction="row" sx={{ p: 2, pb: 0, gap: 1 }}>
-          <Stack direction="row" sx={{ gap: 1, alignItems: 'center', flexGrow: 1, p: 1 }}>
+        <Stack direction="row" sx={{ p: 2, pb: 2, gap: 1 }}>
+          <Stack direction="row" sx={{ gap: 1, alignItems: 'center', flexGrow: 1 }}>
             <Avatar
               sizes="small"
               alt="Riley Carter"
@@ -56,7 +55,6 @@ export default function SideMenuMobile({ open, toggleDrawer }: SideMenuMobilePro
           <MenuContent />
           <Divider />
         </Stack>
-        <CardAlert />
         <Stack sx={{ p: 2 }}>
           <Button variant="outlined" fullWidth startIcon={<LogoutRoundedIcon />}>
             Logout

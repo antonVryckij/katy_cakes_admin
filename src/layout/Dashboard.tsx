@@ -4,10 +4,10 @@ import type {} from '@mui/x-tree-view/themeAugmentation';
 import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import AppNavbar from './components/AppNavbar';
-import Header from './components/Header';
-import MainGrid from './components/MainGrid';
-import SideMenu from './components/SideMenu';
+import AppNavbar from '../components/AppNavbar';
+import Header from '../components/Header';
+import MainGrid from '../components/MainGrid';
+import SideMenu from '../components/SideMenu';
 
 const Dashboard = () => {
   return (
