@@ -1,8 +1,7 @@
 /** @type {import("stylelint").Config} */
 export default {
-  plugins: ['stylelint-prettier'],
-  rules: {
-    'prettier/prettier': true,
-  },
   extends: ['stylelint-config-standard'],
+  rules: {
+    'selector-class-pattern': null,
+  },
 };

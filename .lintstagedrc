@@ -1,4 +1,4 @@
 {
-    "*.{css,scss}": ["stylelint --fix", "prettier --write"],
-    "*.{js,ts,jsx,tsx}": ["eslint --fix", "prettier --write"],
+    "*.{css,scss}": ["npm run stylelint", "prettier --write"],
+    "*.{js,ts,jsx,tsx}": ["npm run lint", "prettier --write"],
 }
