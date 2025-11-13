@@ -20,12 +20,15 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: HomePage,
+      },
+      {
+        path: 'users',
+        Component: UsersPage,
         loader: async () => {
           const { data } = await supabase.from('clients').select();
           return data;
         },
       },
-      { path: 'users', Component: UsersPage },
     ],
   },
 ]);

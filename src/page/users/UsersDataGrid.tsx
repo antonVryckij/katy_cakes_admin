@@ -21,6 +21,8 @@ const columns: GridColDef[] = [
 export default function UsersDataGrid() {
   const data = useLoaderData();
 
+  console.log('data', data);
+
   return (
     <DataGrid
       checkboxSelection
