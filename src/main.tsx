@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import { createBrowserRouter } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
+import { supabase } from './supabase';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -16,7 +17,14 @@ const router = createBrowserRouter([
     path: '/',
     Component: App,
     children: [
-      { index: true, Component: HomePage },
+      {
+        index: true,
+        Component: HomePage,
+        loader: async () => {
+          const { data } = await supabase.from('clients').select();
+          return data;
+        },
+      },
       { path: 'users', Component: UsersPage },
     ],
   },

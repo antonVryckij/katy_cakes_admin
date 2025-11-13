@@ -1,5 +1,6 @@
 import { DataGrid } from '@mui/x-data-grid';
-import type { GridRowsProp, GridColDef } from '@mui/x-data-grid';
+import type { GridColDef } from '@mui/x-data-grid';
+import { useLoaderData } from 'react-router';
 
 const columns: GridColDef[] = [
   { field: 'orderNum', headerName: 'Номер замовлення', minWidth: 200 },
@@ -17,26 +18,13 @@ const columns: GridColDef[] = [
   },
 ];
 
-const rows: GridRowsProp = [
-  {
-    id: 1,
-    orderNum: 1,
-    status: 'В обробці',
-    client: 'Паровоз Юля',
-  },
-  {
-    id: 2,
-    orderNum: 2,
-    status: 'Гончар Ганна',
-    client: 8345,
-  },
-];
-
 export default function UsersDataGrid() {
+  const data = useLoaderData();
+
   return (
     <DataGrid
       checkboxSelection
-      rows={rows}
+      rows={data}
       columns={columns}
       getRowClassName={(params) => (params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd')}
       initialState={{
