@@ -1,20 +1,13 @@
-import type {} from '@mui/x-date-pickers/themeAugmentation';
-import type {} from '@mui/x-charts/themeAugmentation';
-import type {} from '@mui/x-tree-view/themeAugmentation';
 import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import AppNavbar from '../components/AppNavbar';
-import Header from '../components/Header';
-import MainGrid from '../components/MainGrid';
-import SideMenu from '../components/SideMenu';
+import Sidebar from './Sidebar';
+import { Outlet } from 'react-router';
 
 const Dashboard = () => {
   return (
     <Box sx={{ display: 'flex' }}>
-      <SideMenu />
-      <AppNavbar />
-      {/* Main content */}
+      <Sidebar />
+
       <Box
         component="main"
         sx={(theme) => ({
@@ -25,18 +18,7 @@ const Dashboard = () => {
           overflow: 'auto',
         })}
       >
-        <Stack
-          spacing={2}
-          sx={{
-            alignItems: 'center',
-            mx: 3,
-            pb: 5,
-            mt: { xs: 8, md: 0 },
-          }}
-        >
-          <Header />
-          <MainGrid />
-        </Stack>
+        <Outlet />
       </Box>
     </Box>
   );

@@ -32,7 +32,7 @@ const rows: GridRowsProp = [
   },
 ];
 
-export default function CustomizedDataGrid() {
+export default function UsersDataGrid() {
   return (
     <DataGrid
       checkboxSelection

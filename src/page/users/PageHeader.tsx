@@ -1,8 +1,8 @@
 import Stack from '@mui/material/Stack';
-import CustomDatePicker from './CustomDatePicker';
-import NavbarBreadcrumbs from './NavbarBreadcrumbs';
+import CustomDatePicker from '../../components/CustomDatePicker';
+import NavbarBreadcrumbs from '../../components/NavbarBreadcrumbs';
 
-export default function Header() {
+export default function PageHeader() {
   return (
     <Stack
       direction="row"

@@ -1,8 +1,6 @@
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import CustomizedDataGrid from './CustomizedDataGrid';
-import StatCard, { type StatCardProps } from './StatCard';
+import Grid from '@mui/material/Grid';
+import StatCard, { type StatCardProps } from '../../components/StatCard';
 
 const data: StatCardProps[] = [
   {
@@ -37,9 +35,9 @@ const data: StatCardProps[] = [
   },
 ];
 
-export default function MainGrid() {
+const WidgetsSection = () => {
   return (
-    <Box sx={{ width: '100%', maxWidth: { sm: '100%' } }}>
+    <>
       <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
         Overview
       </Typography>
@@ -50,14 +48,8 @@ export default function MainGrid() {
           </Grid>
         ))}
       </Grid>
-      <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
-        Details
-      </Typography>
-      <Grid container spacing={2} columns={12}>
-        <Grid size={{ xs: 12 }}>
-          <CustomizedDataGrid />
-        </Grid>
-      </Grid>
-    </Box>
+    </>
   );
-}
+};
+
+export default WidgetsSection;

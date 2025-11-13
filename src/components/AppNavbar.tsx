@@ -8,7 +8,7 @@ import { tabsClasses } from '@mui/material/Tabs';
 import Typography from '@mui/material/Typography';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
-import SideMenuMobile from './SideMenuMobile';
+import SideMenuMobile from '../layout/Sidebar/SideMenuMobile';
 import MenuButton from './MenuButton';
 
 const Toolbar = styled(MuiToolbar)({
@@ -60,7 +60,7 @@ export default function AppNavbar() {
           <Stack direction="row" spacing={1} sx={{ justifyContent: 'center', mr: 'auto' }}>
             <CustomIcon />
             <Typography variant="h4" component="h1" sx={{ color: 'text.primary' }}>
-              Dashboard
+              Dashboard !!!
             </Typography>
           </Stack>
           <MenuButton aria-label="menu" onClick={toggleDrawer(true)}>
