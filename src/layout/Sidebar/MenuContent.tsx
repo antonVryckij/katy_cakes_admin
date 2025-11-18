@@ -3,15 +3,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
 import { useLocation, useNavigate } from 'react-router';
 import ListItemButton from '@mui/material/ListItemButton';
-
-const mainListItems = [
-  { text: 'Home', icon: <HomeRoundedIcon />, path: '/' },
-  { text: 'Clients', icon: <PeopleRoundedIcon />, path: '/users' },
-];
+import { navList } from './navList';
 
 export default function MenuContent() {
   const navigate = useNavigate();
@@ -20,7 +14,7 @@ export default function MenuContent() {
   return (
     <Stack sx={{ flexGrow: 1, p: 1 }}>
       <List dense>
-        {mainListItems.map((item, index) => (
+        {navList.map((item, index) => (
           <ListItem key={index} disablePadding sx={{ display: 'block' }}>
             <ListItemButton
               selected={location?.pathname === item.path}

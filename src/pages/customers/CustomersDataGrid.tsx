@@ -18,7 +18,7 @@ const columns: GridColDef[] = [
   },
 ];
 
-export default function UsersDataGrid() {
+export default function CustomersDataGrid() {
   const data = useLoaderData();
 
   console.log('data', data);

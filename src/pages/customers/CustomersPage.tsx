@@ -4,7 +4,7 @@ import WidgetsSection from './WidgetsSection';
 import PageLayout from '../../layout/PageLayout';
 import PageHeader from './PageHeader';
 
-const UsersPage = () => {
+const CustomersPage = () => {
   return (
     <PageLayout>
       <PageHeader />
@@ -16,4 +16,4 @@ const UsersPage = () => {
   );
 };
 
-export default UsersPage;
+export default CustomersPage;
