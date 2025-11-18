@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import UsersDataGrid from './UsersDataGrid';
+import CustomersDataGrid from './CustomersDataGrid';
 
 const TableSection = () => {
   return (
@@ -10,7 +10,7 @@ const TableSection = () => {
       </Typography>
       <Grid container spacing={2} columns={12}>
         <Grid size={{ xs: 12 }}>
-          <UsersDataGrid />
+          <CustomersDataGrid />
         </Grid>
       </Grid>
     </>
