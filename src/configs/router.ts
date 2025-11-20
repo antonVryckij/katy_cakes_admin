@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router';
 import App from '../App';
-import HomePage from '../pages/home';
+import StatisticPage from '../pages/statistic';
 import CustomersPage from '../pages/customers';
 import { ROUTE } from '../constants/route';
 
@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: HomePage,
+        Component: StatisticPage,
       },
       {
         path: ROUTE.CUSTOMERS,

@@ -5,9 +5,17 @@ import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import { useLocation, useNavigate } from 'react-router';
 import ListItemButton from '@mui/material/ListItemButton';
-import { navList } from './navList';
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
+import { ROUTE } from '../../constants/route';
+import { translate } from '../../utils/translate';
 
-export default function MenuContent() {
+const navList = [
+  { text: translate('statistic'), icon: <HomeRoundedIcon />, path: ROUTE.HOME },
+  { text: translate('customers'), icon: <PeopleRoundedIcon />, path: ROUTE.CUSTOMERS },
+];
+
+const MenuContent = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -28,4 +36,6 @@ export default function MenuContent() {
       </List>
     </Stack>
   );
-}
+};
+
+export default MenuContent;

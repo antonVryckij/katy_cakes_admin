@@ -1,21 +1,18 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Divider, { dividerClasses } from '@mui/material/Divider';
+import { dividerClasses } from '@mui/material/Divider';
 import Menu from '@mui/material/Menu';
 import MuiMenuItem from '@mui/material/MenuItem';
 import { paperClasses } from '@mui/material/Paper';
 import { listClasses } from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
-import ListItemIcon, { listItemIconClasses } from '@mui/material/ListItemIcon';
+import ListItemIcon from '@mui/material/ListItemIcon';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
-import MoreVertRoundedIcon from '@mui/icons-material/MoreVertRounded';
 import MenuButton from '../../components/MenuButton';
+import Logo from '../../../public/img/avatar-girl-2.svg?react';
+import { useTranslation } from 'react-i18next';
 
-const MenuItem = styled(MuiMenuItem)({
-  margin: '2px 0',
-});
-
-export default function OptionsMenu() {
+const UserMenu = () => {
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -24,11 +21,13 @@ export default function OptionsMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <React.Fragment>
       <MenuButton aria-label="Open menu" onClick={handleClick} sx={{ borderColor: 'transparent' }}>
-        <MoreVertRoundedIcon />
+        <Logo style={{ width: '48px', height: '48px' }} />
       </MenuButton>
+
       <Menu
         anchorEl={anchorEl}
         id="menu"
@@ -49,27 +48,15 @@ export default function OptionsMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <Divider />
-        <MenuItem onClick={handleClose}>Add another account</MenuItem>
-        <MenuItem onClick={handleClose}>Settings</MenuItem>
-        <Divider />
-        <MenuItem
-          onClick={handleClose}
-          sx={{
-            [`& .${listItemIconClasses.root}`]: {
-              ml: 'auto',
-              minWidth: 0,
-            },
-          }}
-        >
-          <ListItemText>Logout</ListItemText>
+        <MuiMenuItem sx={{ m: '2px 0' }} onClick={handleClose}>
           <ListItemIcon>
             <LogoutRoundedIcon fontSize="small" />
           </ListItemIcon>
-        </MenuItem>
+          <ListItemText>{t('logout')}</ListItemText>
+        </MuiMenuItem>
       </Menu>
     </React.Fragment>
   );
-}
+};
+
+export default UserMenu;

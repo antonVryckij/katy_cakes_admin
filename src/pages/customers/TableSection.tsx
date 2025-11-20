@@ -1,19 +1,14 @@
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
 import CustomersDataGrid from './CustomersDataGrid';
+import PageSection from '../../layout/PageSection';
+import { useTranslation } from 'react-i18next';
 
 const TableSection = () => {
+  const { t } = useTranslation();
+
   return (
-    <>
-      <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
-        Details
-      </Typography>
-      <Grid container spacing={2} columns={12}>
-        <Grid size={{ xs: 12 }}>
-          <CustomersDataGrid />
-        </Grid>
-      </Grid>
-    </>
+    <PageSection title={t('customers')}>
+      <CustomersDataGrid />
+    </PageSection>
   );
 };
 

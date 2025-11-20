@@ -1,12 +1,9 @@
 import { styled } from '@mui/material/styles';
-import Avatar from '@mui/material/Avatar';
 import MuiDrawer, { drawerClasses } from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
 import MenuContent from './MenuContent';
-import OptionsMenu from './OptionsMenu';
+import Logo from '../../../public/img/logo-full.svg?react';
 
 const drawerWidth = 240;
 
@@ -32,37 +29,8 @@ export default function SideMenu() {
         },
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          mt: 'calc(var(--template-frame-height, 0px) + 4px)',
-          p: 1.5,
-        }}
-      >
-        <Stack
-          direction="row"
-          sx={{
-            p: 2,
-            gap: 1,
-            alignItems: 'center',
-          }}
-        >
-          <Avatar
-            sizes="small"
-            alt="Riley Carter"
-            src="/static/images/avatar/7.jpg"
-            sx={{ width: 36, height: 36 }}
-          />
-          <Box sx={{ mr: 'auto' }}>
-            <Typography variant="body2" sx={{ fontWeight: 500, lineHeight: '16px' }}>
-              Riley Carter
-            </Typography>
-            <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-              riley@email.com
-            </Typography>
-          </Box>
-          <OptionsMenu />
-        </Stack>
+      <Box sx={{ p: 3 }} display="flex" justifyContent="center">
+        <Logo style={{ width: '140px', height: 'auto' }} />
       </Box>
       <Divider />
       <Box

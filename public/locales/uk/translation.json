@@ -1,4 +1,10 @@
 {
-  "home": "Головна сторінка",
-  "customers": "Клієнти"
+  "statistic": "Статистика",
+  "customers": "Клієнти",
+  "search": "Пошук",
+  "inDevelopment": "Функціонал в активній розробці",
+  "logout": "Вийти з системи",
+  "noRowsLabel": "Записи відсутні",
+  "paginationRowsPerPage": "Рядків на сторінку",
+  "moreThan": "Більше ніж"
 }

@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router/dom';
-import { router } from './utils/router';
+import { router } from './configs/router';
 import './configs/i18n';
 
 import '@fontsource/roboto/300.css';
