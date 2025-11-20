@@ -1,33 +1,35 @@
-import { DataGrid } from '@mui/x-data-grid';
-import type { GridColDef } from '@mui/x-data-grid';
-import { useLoaderData } from 'react-router';
+import {
+  DataGrid,
+  type DataGridProps,
+  type GridActionsColDef,
+  type GridColDef,
+  type GridRowsProp,
+  type GridSingleSelectColDef,
+  type GridValidRowModel,
+} from '@mui/x-data-grid';
 import { useTranslation } from 'react-i18next';
 
-const columns: GridColDef[] = [
-  { field: 'orderNum', headerName: 'Номер замовлення', minWidth: 200 },
-  {
-    field: 'status',
-    headerName: 'Статус',
-    flex: 1,
-    minWidth: 80,
-  },
-  {
-    field: 'client',
-    headerName: 'Клієнт',
-    flex: 1,
-    minWidth: 80,
-  },
-];
+type BaseGridColDef<TData extends GridValidRowModel> =
+  | (Omit<GridColDef<TData>, 'field'> & {
+      field: keyof TData & string;
+    })
+  | GridActionsColDef<TData, any, any>
+  | GridSingleSelectColDef<TData, any, any>;
 
-export default function CustomersDataGrid() {
-  const data = useLoaderData();
+type BaseDataGridProps<TData extends GridValidRowModel> = Omit<
+  DataGridProps,
+  'columns' | 'rows'
+> & {
+  columns: BaseGridColDef<TData>[];
+  rows: GridRowsProp<TData>;
+};
+
+function BaseDataGrid<TData extends GridValidRowModel>(props: BaseDataGridProps<TData>) {
   const { t } = useTranslation();
 
   return (
     <DataGrid
       checkboxSelection
-      rows={data}
-      columns={columns}
       getRowClassName={(params) => (params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd')}
       initialState={{
         pagination: { paginationModel: { pageSize: 20 } },
@@ -48,7 +50,6 @@ export default function CustomersDataGrid() {
         },
       }}
       slotProps={{
-        noRowsOverlay: {},
         filterPanel: {
           filterFormProps: {
             logicOperatorInputProps: {
@@ -74,6 +75,10 @@ export default function CustomersDataGrid() {
           },
         },
       }}
+      {...props}
     />
   );
 }
+
+export type { BaseGridColDef, BaseDataGridProps };
+export default BaseDataGrid;

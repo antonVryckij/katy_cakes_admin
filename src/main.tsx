@@ -1,7 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router/dom';
-import { router } from './configs/router';
+import { router, theme } from './configs';
+import { ThemeProvider } from '@mui/material/styles';
 import './configs/i18n';
 
 import '@fontsource/roboto/300.css';
@@ -13,6 +14,8 @@ const root = document.getElementById('root')!;
 
 createRoot(root).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );

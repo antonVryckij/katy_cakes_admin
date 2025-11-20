@@ -1,5 +1,5 @@
-import i18n, { initPromise } from '../configs/i18n';
 import type { Translation } from '../types/i18next';
+import { i18n, initPromise } from '../configs';
 
 export const translate = async (key: keyof Translation) => {
   await initPromise;
