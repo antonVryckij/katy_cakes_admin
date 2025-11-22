@@ -1,5 +1,5 @@
 import SideMenu from './SideMenu';
-import AppNavbar from '../../components/AppNavbar';
+import AppNavbar from '../AppNavbar';
 
 const Sidebar = () => {
   return (

@@ -7,11 +7,11 @@ import { listClasses } from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
-import MenuButton from '../../components/MenuButton';
-import Logo from '../../../public/img/avatar-girl-2.svg?react';
+import MenuButton from '../../shared/MenuButton';
+import Logo from '../../../../public/img/avatar-girl-2.svg?react';
 import { useTranslation } from 'react-i18next';
 
-const UserMenu = () => {
+const UserAccountMenu = () => {
   const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -59,4 +59,4 @@ const UserMenu = () => {
   );
 };
 
-export default UserMenu;
+export default UserAccountMenu;

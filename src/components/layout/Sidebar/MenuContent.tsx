@@ -7,8 +7,8 @@ import { useLocation, useNavigate } from 'react-router';
 import ListItemButton from '@mui/material/ListItemButton';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
-import { ROUTE } from '../../constants/route';
-import { translate } from '../../utils/translate';
+import { ROUTE } from '../../../constants/route';
+import { translate } from '../../../utils/translate';
 
 const navList = [
   { text: translate('statistic'), icon: <HomeRoundedIcon />, path: ROUTE.HOME },

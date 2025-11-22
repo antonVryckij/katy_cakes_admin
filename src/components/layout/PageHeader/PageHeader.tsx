@@ -1,10 +1,9 @@
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import { useTranslation } from 'react-i18next';
-import UserMenu from './UserMenu';
+import UserAccountMenu from './UserAccountMenu';
 
 const PageHeader = () => {
   const { t } = useTranslation();
@@ -19,7 +18,6 @@ const PageHeader = () => {
         justifyContent: 'space-between',
         maxWidth: { sm: '100%', md: '1700px' },
       }}
-      spacing={2}
     >
       <TextField
         id="input-with-icon-textfield"
@@ -35,9 +33,7 @@ const PageHeader = () => {
           },
         }}
       />
-      <Box>
-        <UserMenu />
-      </Box>
+      <UserAccountMenu />
     </Stack>
   );
 };

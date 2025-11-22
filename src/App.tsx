@@ -1,5 +1,5 @@
 import CssBaseline from '@mui/material/CssBaseline';
-import Dashboard from './layout/Dashboard';
+import Dashboard from './components/layout/Dashboard';
 
 function App() {
   return (

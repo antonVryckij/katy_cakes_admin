@@ -6,5 +6,6 @@
   "logout": "Вийти з системи",
   "noRowsLabel": "Записи відсутні",
   "paginationRowsPerPage": "Рядків на сторінку",
-  "moreThan": "Більше ніж"
+  "moreThan": "Більше ніж",
+  "addCustomer": "Додати клієнта"
 }

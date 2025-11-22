@@ -3,7 +3,7 @@ import MuiDrawer, { drawerClasses } from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import MenuContent from './MenuContent';
-import Logo from '../../../public/img/logo-full.svg?react';
+import Logo from '../../../../public/img/logo-full.svg?react';
 
 const drawerWidth = 240;
 
