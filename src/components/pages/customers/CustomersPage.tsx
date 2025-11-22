@@ -1,14 +1,18 @@
-import TableSection from './TableSection';
 import PageLayout from '../../layout/PageLayout';
-import PageHeader from '../../layout/PageHeader/PageHeader';
 import PageContent from '../../layout/PageContent';
+import PageSection from '../../layout/PageSection';
+import { useTranslation } from 'react-i18next';
+import CustomersTable from './CustomersTable';
 
 const CustomersPage = () => {
+  const { t } = useTranslation();
+
   return (
     <PageLayout>
-      <PageHeader />
       <PageContent>
-        <TableSection />
+        <PageSection title={t('customers')}>
+          <CustomersTable />
+        </PageSection>
       </PageContent>
     </PageLayout>
   );
