@@ -7,5 +7,13 @@
   "noRowsLabel": "Записи відсутні",
   "paginationRowsPerPage": "Рядків на сторінку",
   "moreThan": "Більше ніж",
-  "addCustomer": "Додати клієнта"
+  "addCustomer": "Додати клієнта",
+  "fullName": "ПІБ",
+  "email": "Електронна пошта",
+  "city": "Місто",
+  "phone": "Номер телефону",
+  "socialNetworks": "Соціальні мережі",
+  "cancel": "Відмінити",
+  "save": "Зберегти",
+  "createCustomer": "Створення користувача"
 }
