@@ -8,7 +8,8 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import MenuButton from '../../shared/MenuButton';
-import Logo from '../../../../public/img/avatar-girl-2.svg?react';
+import Logo from '../../../assets/img/avatar-girl-2.svg?react';
+
 import { useTranslation } from 'react-i18next';
 
 const UserAccountMenu = () => {
