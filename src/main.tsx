@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router/dom';
 import { router, theme } from './configs';
 import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import './configs/i18n';
 
 import '@fontsource/roboto/300.css';
@@ -15,6 +16,7 @@ const root = document.getElementById('root')!;
 createRoot(root).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <RouterProvider router={router} />
     </ThemeProvider>
   </StrictMode>,

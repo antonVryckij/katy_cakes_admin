@@ -1,13 +1,13 @@
 import { createBrowserRouter } from 'react-router';
-import App from '../App';
 import StatisticPage from '../components/pages/statistic';
 import CustomersPage from '../components/pages/customers';
 import { ROUTE } from '../constants/route';
+import Dashboard from '../components/layout/Dashboard';
 
 export const router = createBrowserRouter([
   {
     path: ROUTE.HOME,
-    Component: App,
+    Component: Dashboard,
     children: [
       {
         index: true,
