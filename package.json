@@ -1,6 +1,7 @@
 {
   "name": "katy_cakes-admin",
   "private": true,
+  "homepage": "/katy_cakes_admin",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
